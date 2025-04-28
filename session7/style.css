@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url(../Vazirmatn-Bold.woff2);
+}
+
+body{
+    font-family: MyFont;
+}

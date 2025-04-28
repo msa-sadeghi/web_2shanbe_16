@@ -1,0 +1,16 @@
+table{
+    border: none;
+}
+
+th, td{
+    border: none;
+    background-color: bisque;
+    padding: 5px;
+    width: 100px;
+}
+input[type="submit"]{
+    background-color: lightblue;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}

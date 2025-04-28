@@ -1,0 +1,30 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p#intro{
+    color: red;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+p.g{
+    color: green;
+}
+a:link{
+    color: green;
+    text-decoration: none;
+}
+
+a:visited{
+    color: blue;
+}
+a:hover{
+    color: red;
+    font-size: 34px;
+}
