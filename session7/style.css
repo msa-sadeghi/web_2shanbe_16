@@ -1,8 +1,61 @@
 @font-face {
-    font-family: 'MyFont';
+    font-family: 'vazir';
     src: url(../Vazirmatn-Bold.woff2);
 }
 
 body{
-    font-family: MyFont;
+    /* font-family: vazir; */
+    padding: 20px;
+/* }
+h1,h2,h3{
+    font-weight: normal;
+    margin: 0px;
+    color:#0088dd
+}
+
+h1{
+    font-size: 250%;
+}
+h3{
+    font-size: 90%;
+    text-transform: uppercase;
+}
+p{
+    line-height: 1.4em;
+    border: 2px solid #0088dd;
+    box-shadow: -13px -10px 11px #0088dd;
+    text-shadow: 3px 3px 4px red;
+}
+p.intro{
+    font-size: 120%;
+    color: #555;
+    word-spacing: 35px;
+}
+p.intro::first-line{
+    background-color: cyan;
+}
+p.intro::first-letter{
+    font-size: 200%;
+    color: #0088dd;
+    
+    
+    margin-right: 5px;
+}
+a{
+    text-decoration: none;
+    letter-spacing: -2px;
+}
+a:hover{
+    text-decoration: underline;
+} */
+
+
+#first{
+    vertical-align: top;
+}
+#second{
+    vertical-align: middle;
+}
+#third{
+    vertical-align: -31px;
 }
