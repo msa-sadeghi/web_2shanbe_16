@@ -2,9 +2,21 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: vazir;
 }
 
+@font-face {
+    font-family: vazir;
+    src: url(./Vazirmatn-Bold.woff2);
+}
+.container-fluid{
+    width: 100%;
+}
 
+.container{
+    max-width: 1200px;
+    margin: 0px auto;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

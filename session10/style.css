@@ -1,4 +1,26 @@
-div{
-    background-color: red;
+body{
+    direction: rtl;
+}
+
+.header{
+    background: url(./images/bg-header.jpg);
     height: 100px;
+    
+}
+nav{
+    background-color: #efefef;
+    margin: 5px;
+}
+
+nav ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+nav ul{
+    display: flex;
 }
