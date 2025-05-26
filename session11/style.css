@@ -1,0 +1,45 @@
+.hero-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left,  .right{
+width: 50%;
+}
+
+.right img{
+    width: 100%;
+}
+
+.buttons
+{
+    margin: 10px;
+}
+.buttons input:first-child{
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.buttons input:last-child{
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.left h1, p{
+    margin: 15px;
+}
+@media screen and (max-width:600px){
+    .left p{
+        display: none;
+    }
+    .left h1{
+        margin: 20px;
+        font-size: small;
+    }
+}
