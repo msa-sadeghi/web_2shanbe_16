@@ -34,12 +34,50 @@ width: 50%;
 .left h1, p{
     margin: 15px;
 }
-@media screen and (max-width:600px){
-    .left p{
-        display: none;
-    }
-    .left h1{
-        margin: 20px;
-        font-size: small;
-    }
+
+nav{
+    max-width: 1200px;
+    background-color: rgb(239, 234, 234);
+    margin: 10px auto;
 }
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li a{
+    text-decoration: none;
+    line-height: 24px;
+}
+
+aside ul{
+    list-style: none;
+}
+
+aside div{
+    border: 2px solid brown;
+    border-radius: 10px;
+    padding: 20px;
+}
+@media screen and (max-width:600px){
+    .right img{
+        filter: blur(7px);
+        z-index: -1;
+    }
+    .right{
+        position: absolute;
+        width: 100%;
+    }
+    .left{
+        width: 100%;
+        z-index: 1;
+        background-color: #efefef5d
+        ;
+    }
+
+    nav{
+        margin-top: 30px;
+    }  
+}
+
+
