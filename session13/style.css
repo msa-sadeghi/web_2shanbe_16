@@ -1,0 +1,28 @@
+li{
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+}
+.sub-menu{
+    background-color: rgb(227, 224, 224);
+    display: none;
+    position: absolute;
+    animation: test 2s;
+}
+.sub-menu li{
+    display: block;
+}
+.has-sub-menu{
+    position: relative;
+}
+.has-sub-menu:hover .sub-menu{
+ display: block;
+}
+@keyframes test {
+    0%{
+        background-color: aqua;
+    }
+    100%{
+        background-color: rgb(129, 97, 231);
+    }
+}
