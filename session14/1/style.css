@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+input[type="checkbox"]{
+    display: none;
+}
+i{
+    font-size: 28px;
+}
+label :nth-child(2){
+    display: none;
+}
+.menu{
+    display: none;
+}
+label{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    margin: 20px
+}
+input[type="checkbox"]:checked ~ label{
+    left: auto;
+    right: 0;
+   
+}
+input[type="checkbox"]:checked ~ .menu{
+    display: block;
+}
+input[type="checkbox"]:checked ~ label i:nth-child(1){
+    display: none;
+}
+input[type="checkbox"]:checked ~ label i:nth-child(2){
+    display: block;
+}
+ul li{
+    list-style: none;
+    background-color: antiquewhite;
+    padding: 20px;
+}
