@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 .slideshow-wrap{
     height: 320px;
     min-width: 260px;

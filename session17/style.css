@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+button{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: aqua;
+}
+button i{
+    border-radius: 100%;
+    animation: my 0.7s linear infinite;
+    
+}
+@keyframes my {
+    0%{
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5),
+        0 0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 0 40px rgba(255, 255, 255, 0.5),
+        0 0 0 60px rgba(255, 255, 255, 0.5),
+        ;
+    }
+    100%{
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 0 40px rgba(255, 255, 255, 0.5),
+        0 0 0 60px rgba(255, 255, 255, 0.5),
+        0 0 0 80px rgba(255, 255, 255, 0)
+        ;
+    }
+}
+
+ul{
+    display: none;
+    background-color: aquamarine;
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+ul li{
+    list-style: none;
+    padding: 12px;
+    border-bottom: 1px solid white;
+}
+
+button:active ~ ul.menu, button:focus ~ ul.menu{
+    display: block;
+}
