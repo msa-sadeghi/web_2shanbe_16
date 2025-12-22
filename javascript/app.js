@@ -1,21 +1,34 @@
-console.log(add(2, 5))
-function add(a,  b){
-    return `${a} + ${b} = ${a+b}`
-}
-const sub = function(a, b){
-    return `${a} - ${b} = ${a-b}`
-}
-console.log(sub(2, 5))
-numbers = [1,2]
-const isEven = function(x){
-    console.log(x % 2 == 0)
-}
-numbers.forEach(isEven)
-const mul = (a, b) => {
-    return a * b
-}
-console.log(mul(2, 4))
+const btn = document.querySelector('button')
+const inputElement = document.querySelector('input')
+const list = document.querySelector('.list')
+const resetBtn = document.querySelector('.reset')
+let itemsList = []
+btn.addEventListener('click', (e)=>{
+    let inputvalue = inputElement.value
+    itemsList.unshift(inputvalue)
+    render()
+})
 
-const isGreaterThan10 = x => x > 10
-console.log(isGreaterThan10(11))
-console.log(isGreaterThan10(8))
+
+resetBtn.addEventListener('click', (e)=>{
+    itemsList = []
+    render()
+})
+function render(){
+    list.innerHTML = ''
+     itemsList.forEach(element => {
+        const newDiv = document.createElement('div')
+        newDiv.classList.add('list-item')
+        let newSpan = document.createElement('span')
+        newSpan.textContent = element
+        newDiv.append(newSpan)
+        list.append(newDiv)
+    });
+    localStorage.setItem('todoList', JSON.stringify(itemsList))
+}
+window.onload =  (e) => {
+    itemsList = JSON.parse(localStorage.getItem('todoList'))
+    if(itemsList !== null)
+    render()
+    else itemsList = []
+}
