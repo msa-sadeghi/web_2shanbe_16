@@ -1,35 +1,50 @@
-div.input{
-    background-color: #efefef;
-    padding: 20px;
-    border-radius: 10px;
-}
-input{
-    border: none;
-    padding: 10px 20px;
-    margin-right: 10px;
-}
-
-button{
-    padding: 10px 20px;
-    border: none;
-    border-radius: 12px;
-    background-color: white;
-    cursor: pointer;
-}
-
-div.list{
-    background-color: antiquewhite;
-    padding: 20px 40px;
-    margin-top: 20px;
-    border-radius: 20px;
-
-}
-
-.list-item{
-    background-color: white;
-    padding: 10px 25px;
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 0;
-    border-radius: 5px;
-}
+ body { font-family: Tahoma; padding: 20px; max-width: 600px; margin: 0 auto; }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: Tahoma;
+        }
+        input:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+        input.error {
+            border-color: #f44336;
+        }
+        input.valid {
+            border-color: #4caf50;
+        }
+        .error-message {
+            color: #f44336;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .info {
+            padding: 15px;
+            background: #e3f2fd;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
