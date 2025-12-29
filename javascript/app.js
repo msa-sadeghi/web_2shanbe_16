@@ -1,34 +1,28 @@
-const btn = document.querySelector('button')
-const inputElement = document.querySelector('input')
-const list = document.querySelector('.list')
-const resetBtn = document.querySelector('.reset')
-let itemsList = []
-btn.addEventListener('click', (e)=>{
-    let inputvalue = inputElement.value
-    itemsList.unshift(inputvalue)
-    render()
-})
+let form = document.getElementById("myForm")
+let name = document.getElementById("name")
+let email = document.getElementById("email")
+let age = document.getElementById("age")
+let country = document.getElementById("country")
+let info = document.getElementById("info")
+let submitBtn = document.querySelector("button")
 
 
-resetBtn.addEventListener('click', (e)=>{
-    itemsList = []
-    render()
+name.addEventListener("input", (e)=>{
+    let l = e.target.value.length
+    let nameError = document.getElementById("nameError")
+    if(l < 3){
+        nameError.style.display = "block"
+        name.classList.add("error")
+    }else{
+        nameError.style.display = "none"
+        name.classList.remove("error")
+    }
 })
-function render(){
-    list.innerHTML = ''
-     itemsList.forEach(element => {
-        const newDiv = document.createElement('div')
-        newDiv.classList.add('list-item')
-        let newSpan = document.createElement('span')
-        newSpan.textContent = element
-        newDiv.append(newSpan)
-        list.append(newDiv)
-    });
-    localStorage.setItem('todoList', JSON.stringify(itemsList))
-}
-window.onload =  (e) => {
-    itemsList = JSON.parse(localStorage.getItem('todoList'))
-    if(itemsList !== null)
-    render()
-    else itemsList = []
-}
+
+email.addEventListener("input", (e)=>{
+    let emailError = document.getElementById("emailError")
+    let emailVal = e.target.value
+    // let pattern =  /^[\w\._]+@[a-zA-Z]{2,}\.[a-zA-Z]{2,}/
+    // pattern.test(emailVal)
+
+})
