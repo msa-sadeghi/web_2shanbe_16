@@ -2,68 +2,54 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Event Bubbling</title>
+    <title>Capturing vs Bubbling</title>
     <style>
         body { font-family: Tahoma; padding: 20px; }
-        .outer {
-            padding: 40px;
-            background: #e3f2fd;
-            border: 2px solid #2196f3;
+        .box {
+            padding: 30px;
+            margin: 20px;
+            border: 3px solid #667eea;
         }
-        .middle {
-            padding: 40px;
-            background: #f3e5f5;
-            border: 2px solid #9c27b0;
-        }
-        .inner {
-            padding: 40px;
-            background: #e8f5e9;
-            border: 2px solid #4caf50;
-        }
-        #log {
-            margin-top: 20px;
-            padding: 15px;
-            background: #f0f0f0;
-            border-radius: 5px;
-        }
+        #log { background: #f0f0f0; padding: 15px; border-radius: 5px; }
     </style>
 </head>
 <body>
-    <h1>Event Bubbling</h1>
+    <h1>Capturing و Bubbling</h1>
     
-    <div class="outer" id="outer">
-        Outer
-        <div class="middle" id="middle">
-            Middle
-            <div class="inner" id="inner">
-                Inner (کلیک کنید)
-            </div>
+    <div id="parent" class="box">
+        Parent
+        <div id="child" class="box">
+            Child (کلیک کنید)
         </div>
     </div>
     
+    <button onclick="document.getElementById('log').innerHTML = ''">پاک کردن</button>
     <div id="log"></div>
     
     <script>
         let log = document.getElementById('log');
+        let parent = document.getElementById('parent');
+        let child = document.getElementById('child');
         
-        function addLog(message) {
-            log.innerHTML += `<div>${message}</div>`;
+        function addLog(msg) {
+            log.innerHTML += `<div>${msg}</div>`;
         }
         
-        // همه به صورت bubbling (پیش‌فرض)
-        document.getElementById('inner').addEventListener('click', function() {
-            addLog('1️⃣ Inner کلیک شد');
+        // Capturing (true)
+        parent.addEventListener('click', function() {
+            addLog('🔽 Parent (Capturing)');
+        }, true);
+        
+        child.addEventListener('click', function() {
+            addLog('🎯 Child (Target)');
         });
         
-        document.getElementById('middle').addEventListener('click', function() {
-            addLog('2️⃣ Middle کلیک شد (Bubbling)');
-        });
+        // Bubbling (false - پیش‌فرض)
+        parent.addEventListener('click', function() {
+            addLog('🔼 Parent (Bubbling)');
+        }, false);
         
-        document.getElementById('outer').addEventListener('click', function() {
-            addLog('3️⃣ Outer کلیک شد (Bubbling)');
-        });
-        
-        // وقتی Inner کلیک می‌کنید، هر سه اجرا می‌شوند!
+        // ترتیب: Parent(Capturing) → Child(Target) → Parent(Bubbling)
     </script>
 </body>
 </html>
